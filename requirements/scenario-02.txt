@@ -1,0 +1,100 @@
+﻿ER Modeling Scenario
+Integrated Hospital Management System for Multiple Facilities
+Business Context
+You have been hired to model the database for a hospital network that operates 15 units across 3 Brazilian states. The system must control, record and monitor everyone who enters and leaves the hospitals, including staff, visitors and patients, ensuring traceability, security and compliance with the institution’s internal rules.
+Functional Requirements
+1. Hospital
+Each hospital contains departments responsible for specific activities. Not every facility in the network must offer every service: each hospital declares which departments, human resources and capacities it provides (available teams and departments).
+Departments in the network include:
+* Emergency
+* ICU (Intensive Care Unit)
+* Surgical Center / Operating Theaters
+* Adult Ward
+* Pediatric Ward
+* Maternity
+* Radiology / Imaging (X-ray, CT, MRI)
+* Clinical Laboratory
+* Outpatient Clinic
+* Hospital Pharmacy
+* Social Services
+* Triage
+* Reception
+1.1. Departments
+* Each department has an assigned coordinator.
+* There must be a leader/responsible person for every shift (i.e., there is always someone accountable for the department at any time).
+2. People Management
+The hospital receives individuals from multiple categories; some are employees and others are not. Categories include: visitor, patient, physician, nurse, resident physician, researcher and administrative staff. A single person may assume more than one role (for example, a physician may be admitted as a patient outside working hours).
+* Physicians may work at multiple units under different contract types (e.g., CLT: permanent employment, PJ: contracted as a legal entity, on-call/shift, daily rate).
+* Residents are licensed physicians in training who attend to patients under supervision; it is important to record the supervising physician for each resident.
+* VIP patients have special rules for care and enhanced privacy (these rules relate to privacy and procedures, not to the medical quality of care).
+* Employees may have dependents who are also patients.
+* The hospital records the following for every person who accesses its facilities: full name, addresses, contact phone numbers, CPF, RG and date of birth. (CPF = Brazilian taxpayer ID; RG = identity card.)
+2.1. Patients
+* Each patient receives an identification wristband.
+* The system must record patient movements between departments, including admission, inter-department transfers and discharge.
+* A complete history of the departments visited by each patient must be maintained.
+* The system must indicate the patient’s current status: awaiting care, in care, admitted (inpatient), under observation, in surgery, or discharged.
+2.2. Visitors
+* Not every visitor is accompanying a patient.
+* The type of visitor must be recorded (e.g., technical visit, regulatory inspection, etc.).
+* Visitor classification is essential to determine access restrictions (important information for the security team).
+* Each visitor receives an identification card at entry.
+* Not all patients are allowed to have an accompanying person. Valid companion cases include: minors; elderly patients; pregnant people; women in labor; postpartum patients; patients with prolonged or severe hospitalization, at the discretion of the attending physician or care team; and situations of emotional or cognitive vulnerability when deemed necessary by a physician or social services.
+* The system must record the visitor’s exit (mandatory).
+* Access outside visiting hours must be blocked unless special authorization is granted by the hospital.
+2.3. Employees
+* Employees must be clearly identified.
+* A researcher can only be a nurse or a physician (i.e., researcher is not an independent occupational category separate from clinical roles).
+* Still, any employee may be treated by the hospital, act as a visitor, or accompany a patient.
+2.4. Addresses
+* A person may have more than one registered address.
+* Employees periodically update their addresses.
+* When possible, patients and visitors should also have their addresses updated.
+* It is important to store the timestamp of the last address update.
+* If the last update was more than six months ago, the system should issue an alert requesting a registration update.
+2.5. Identification Cards
+* Identification cards have an issue date and an expiry date, recorded in the system for security purposes.
+* Cards have a type that designates access level (visually distinguished by different colors).
+* When a card is in use it is marked active.
+* Because patients and visitors do not have personalized cards, a card’s identifier number may be temporarily linked to the person’s record while in use.
+* Only personalized cards (employees) include a photo.
+3. Employee Scheduling
+The hospital units require an integrated time & attendance system covering all 15 units to prevent staff from being accidentally scheduled at two locations at the same time or being assigned impractical schedules.
+* Professionals follow different work routines.
+* Administration must precisely track the hours worked by each employee.
+* Different hospitals in the network may maintain different scheduling contracts with the same employee.
+* It is also necessary to record events that remove an employee from duty, such as days off, medical leave, vacation or training.
+3.1. Time & Attendance Records
+* The system must record each employee’s clock-in and clock-out times.
+* As noted, every employee has an identification card, which facilitates time recording.
+* Time records should generate alerts if an employee exceeds scheduled hours or misses a clock record (useful for HR).
+3.2. Work Shifts
+* Some employees have more flexible shifts than others.
+* Administrative staff generally have fixed weekdays and start/end times.
+* Nurses may follow fixed schedules or rotate through shifts.
+* Physicians may have variable schedules and may visit the hospital only to perform specific duties (consultations, monitoring, surgeries) and leave when those tasks are complete.
+* The employment contract governs how working hours are administered by the contracting institution.
+* The key requirement is accurate recording of clock-in and clock-out times for HR verification of compliance.
+3.3. Availability Exceptions
+* Reasons that remove a professional from scheduled activities must be well documented.
+* Each exception should include start and end dates, type (day off, medical leave, vacation, training) and an optional textual note.
+4. Special Situations and Contingency Procedures
+4.1. Lost Identification Card
+The system must allow immediate registration of a lost card. Upon reporting a loss:
+* the card is automatically invalidated;
+* a new card may be issued and linked to the person;
+* every attempted access with the lost card is blocked and logged;
+* the event generates an alert for security.
+A card history (active, replaced, lost, expired) must be maintained.
+4.2. Card Failure (Defective or Inoperable Card)
+When a card fails to read, the system must record:
+   * the person involved;
+   * reason for the failure;
+   * the read attempt;
+   * manual verification performed (security/reception staff responsible).
+Manual entry/exit validation using an official document plus employee ID/registration must be allowed. After manual validation, the system records the entry/exit with the same legal validity as an electronic read. The defective card should be marked as inoperable and require replacement.
+5. Reports and Queries
+      * Query access history by person, date, department and type (employee, visitor, patient).
+      * Generate department occupancy reports.
+      * Generate reports on compliance with scheduled hours and total hours worked for a given period (month, week, day).
+      * The system must alert whenever a department reaches 60%, 80% and 100% of its operational capacity.
