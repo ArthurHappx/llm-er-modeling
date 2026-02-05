@@ -1,0 +1,248 @@
+{
+  "model": "gpt_01_zero",
+  "tables": {
+    "Hospital": {
+      "*hospital_id": "bigserial() NOT NULL",
+      "name": "varchar(200) NOT NULL",
+      "cnpj": "varchar(20)",
+      "state": "varchar(2) NOT NULL",
+      "city": "varchar(100) NOT NULL",
+      "address": "varchar(300)"
+    },
+    "DepartmentType": {
+      "*department_type_id": "bigserial() NOT NULL",
+      "name": "varchar(100) NOT NULL UNIQUE",
+      "description": "varchar(300)"
+    },
+    "Department": {
+      "*department_id": "bigserial() NOT NULL",
+      "+hospital_id": "bigint() NOT NULL",
+      "+department_type_id": "bigint() NOT NULL",
+      "name": "varchar(150)",
+      "operational_capacity": "int() NOT NULL"
+    },
+    "Person": {
+      "*person_id": "bigserial() NOT NULL",
+      "full_name": "varchar(200) NOT NULL",
+      "cpf": "varchar(14) UNIQUE",
+      "rg": "varchar(20)",
+      "date_of_birth": "date()",
+      "primary_phone": "varchar(20)",
+      "secondary_phone": "varchar(20)"
+    },
+    "Address": {
+      "*address_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "street": "varchar(200) NOT NULL",
+      "number": "varchar(20)",
+      "complement": "varchar(100)",
+      "neighborhood": "varchar(100)",
+      "city": "varchar(100) NOT NULL",
+      "state": "varchar(2) NOT NULL",
+      "zip_code": "varchar(15)",
+      "country": "varchar(100) DEFAULT 'Brasil'",
+      "last_update_ts": "timestamp() NOT NULL"
+    },
+    "Role": {
+      "*role_id": "bigserial() NOT NULL",
+      "name": "varchar(50) NOT NULL UNIQUE",
+      "description": "varchar(200)"
+    },
+    "PersonRole": {
+      "*person_role_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "+role_id": "bigint() NOT NULL",
+      "active": "boolean() DEFAULT true"
+    },
+    "Employee": {
+      "*employee_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "hire_date": "date()",
+      "termination_date": "date()",
+      "employee_code": "varchar(50) UNIQUE"
+    },
+    "EmployeeContract": {
+      "*employee_contract_id": "bigserial() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "+hospital_id": "bigint() NOT NULL",
+      "contract_type": "varchar(30) NOT NULL",
+      "start_date": "date() NOT NULL",
+      "end_date": "date()",
+      "weekly_hours": "int()"
+    },
+    "Physician": {
+      "*physician_id": "bigserial() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "crm_number": "varchar(30) NOT NULL",
+      "specialty": "varchar(100)"
+    },
+    "Nurse": {
+      "*nurse_id": "bigserial() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "coren_number": "varchar(30) NOT NULL"
+    },
+    "Resident": {
+      "*resident_id": "bigserial() NOT NULL",
+      "+physician_id": "bigint() NOT NULL",
+      "+supervisor_physician_id": "bigint() NOT NULL",
+      "program_name": "varchar(150)",
+      "start_date": "date()",
+      "end_date": "date()"
+    },
+    "Patient": {
+      "*patient_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "medical_record_number": "varchar(50) UNIQUE",
+      "wristband_code": "varchar(50) UNIQUE"
+    },
+    "EmployeeDependent": {
+      "*employee_dependent_id": "bigserial() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "+patient_id": "bigint() NOT NULL",
+      "relationship": "varchar(50) NOT NULL"
+    },
+    "VisitorType": {
+      "*visitor_type_id": "bigserial() NOT NULL",
+      "name": "varchar(100) NOT NULL UNIQUE",
+      "description": "varchar(200)"
+    },
+    "Visitor": {
+      "*visitor_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "+visitor_type_id": "bigint() NOT NULL",
+      "is_accompanying_patient": "boolean() DEFAULT false"
+    },
+    "CardType": {
+      "*card_type_id": "bigserial() NOT NULL",
+      "name": "varchar(50) NOT NULL UNIQUE",
+      "color": "varchar(30)",
+      "access_level": "varchar(100)"
+    },
+    "IdentificationCard": {
+      "*card_id": "bigserial() NOT NULL",
+      "card_number": "varchar(50) NOT NULL UNIQUE",
+      "+card_type_id": "bigint() NOT NULL",
+      "issue_date": "date() NOT NULL",
+      "expiry_date": "date()",
+      "is_active": "boolean() DEFAULT false",
+      "has_photo": "boolean() DEFAULT false"
+    },
+    "PersonCardAssignment": {
+      "*person_card_assignment_id": "bigserial() NOT NULL",
+      "+person_id": "bigint() NOT NULL",
+      "+card_id": "bigint() NOT NULL",
+      "assignment_start_ts": "timestamp() NOT NULL",
+      "assignment_end_ts": "timestamp()"
+    },
+    "PatientVisit": {
+      "*patient_visit_id": "bigserial() NOT NULL",
+      "+patient_id": "bigint() NOT NULL",
+      "+hospital_id": "bigint() NOT NULL",
+      "admission_ts": "timestamp() NOT NULL",
+      "discharge_ts": "timestamp()",
+      "admission_reason": "varchar(300)"
+    },
+    "PatientDepartmentMovement": {
+      "*movement_id": "bigserial() NOT NULL",
+      "+patient_visit_id": "bigint() NOT NULL",
+      "+department_id": "bigint() NOT NULL",
+      "movement_ts": "timestamp() NOT NULL",
+      "movement_type": "varchar(30) NOT NULL",
+      "status": "varchar(30) NOT NULL"
+    },
+    "VisitorAccess": {
+      "*visitor_access_id": "bigserial() NOT NULL",
+      "+visitor_id": "bigint() NOT NULL",
+      "+hospital_id": "bigint() NOT NULL",
+      "+department_id": "bigint()",
+      "+card_id": "bigint()",
+      "+patient_id": "bigint()",
+      "entry_ts": "timestamp() NOT NULL",
+      "exit_ts": "timestamp()",
+      "has_special_authorization": "boolean() DEFAULT false",
+      "authorization_reason": "varchar(300)"
+    },
+    "EmployeeSchedule": {
+      "*employee_schedule_id": "bigserial() NOT NULL",
+      "+employee_contract_id": "bigint() NOT NULL",
+      "+department_id": "bigint()",
+      "weekday": "int()",
+      "start_time": "time()",
+      "end_time": "time()",
+      "is_rotating_shift": "boolean() DEFAULT false"
+    },
+    "EmployeeAvailabilityException": {
+      "*availability_exception_id": "bigserial() NOT NULL",
+      "+employee_contract_id": "bigint() NOT NULL",
+      "start_date": "date() NOT NULL",
+      "end_date": "date() NOT NULL",
+      "type": "varchar(30) NOT NULL",
+      "note": "varchar(300)"
+    },
+    "TimeClockRecord": {
+      "*time_clock_record_id": "bigserial() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "+card_id": "bigint() NOT NULL",
+      "clock_ts": "timestamp() NOT NULL",
+      "record_type": "varchar(10) NOT NULL",
+      "source": "varchar(50)"
+    },
+    "DepartmentShiftResponsibility": {
+      "*dept_shift_resp_id": "bigserial() NOT NULL",
+      "+department_id": "bigint() NOT NULL",
+      "+employee_id": "bigint() NOT NULL",
+      "shift_start_ts": "timestamp() NOT NULL",
+      "shift_end_ts": "timestamp() NOT NULL",
+      "is_coordinator": "boolean() DEFAULT false"
+    },
+    "DepartmentOccupancySnapshot": {
+      "*occupancy_snapshot_id": "bigserial() NOT NULL",
+      "+department_id": "bigint() NOT NULL",
+      "snapshot_ts": "timestamp() NOT NULL",
+      "current_occupancy": "int() NOT NULL",
+      "capacity_at_time": "int() NOT NULL",
+      "alert_level": "varchar(10)"
+    }
+  },
+  "relations": [
+    "Hospital:hospital_id 1--* Department:hospital_id",
+    "DepartmentType:department_type_id 1--* Department:department_type_id",
+    "Person:person_id 1--* Address:person_id",
+    "Person:person_id 1--* PersonRole:person_id",
+    "Role:role_id 1--* PersonRole:role_id",
+    "Person:person_id 1--* Employee:person_id",
+    "Employee:employee_id 1--* EmployeeContract:employee_id",
+    "Hospital:hospital_id 1--* EmployeeContract:hospital_id",
+    "Employee:employee_id 1--* Physician:employee_id",
+    "Employee:employee_id 1--* Nurse:employee_id",
+    "Physician:physician_id 1--* Resident:physician_id",
+    "Physician:physician_id 1--* Resident:supervisor_physician_id",
+    "Person:person_id 1--* Patient:person_id",
+    "Employee:employee_id 1--* EmployeeDependent:employee_id",
+    "Patient:patient_id 1--* EmployeeDependent:patient_id",
+    "VisitorType:visitor_type_id 1--* Visitor:visitor_type_id",
+    "Person:person_id 1--* Visitor:person_id",
+    "CardType:card_type_id 1--* IdentificationCard:card_type_id",
+    "Person:person_id 1--* PersonCardAssignment:person_id",
+    "IdentificationCard:card_id 1--* PersonCardAssignment:card_id",
+    "Patient:patient_id 1--* PatientVisit:patient_id",
+    "Hospital:hospital_id 1--* PatientVisit:hospital_id",
+    "PatientVisit:patient_visit_id 1--* PatientDepartmentMovement:patient_visit_id",
+    "Department:department_id 1--* PatientDepartmentMovement:department_id",
+    "Visitor:visitor_id 1--* VisitorAccess:visitor_id",
+    "Hospital:hospital_id 1--* VisitorAccess:hospital_id",
+    "Department:department_id ?--* VisitorAccess:department_id",
+    "IdentificationCard:card_id ?--* VisitorAccess:card_id",
+    "Patient:patient_id ?--* VisitorAccess:patient_id",
+    "EmployeeContract:employee_contract_id 1--* EmployeeSchedule:employee_contract_id",
+    "Department:department_id ?--* EmployeeSchedule:department_id",
+    "EmployeeContract:employee_contract_id 1--* EmployeeAvailabilityException:employee_contract_id",
+    "Employee:employee_id 1--* TimeClockRecord:employee_id",
+    "IdentificationCard:card_id 1--* TimeClockRecord:card_id",
+    "Department:department_id 1--* DepartmentShiftResponsibility:department_id",
+    "Employee:employee_id 1--* DepartmentShiftResponsibility:employee_id",
+    "Department:department_id 1--* DepartmentOccupancySnapshot:department_id"
+  ],
+  "rankAdjustments": "",
+  "label": "Integrated Hospital Management System"
+}

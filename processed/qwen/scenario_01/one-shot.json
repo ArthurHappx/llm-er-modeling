@@ -1,0 +1,128 @@
+{
+  "tables": {
+    "Person": {
+      "*PersonID": "int() NOT NULL",
+      "Name": "varchar(200) NOT NULL",
+      "CPF": "varchar(11) NOT NULL",
+      "RG": "varchar(15) NOT NULL",
+      "DOB": "date() NOT NULL"
+    },
+    "Hospital": {
+      "*HospitalID": "int() NOT NULL",
+      "Name": "varchar(200) NOT NULL",
+      "State": "varchar(50) NOT NULL"
+    },
+    "Department": {
+      "*DepartmentID": "int() NOT NULL",
+      "Name": "varchar(100) NOT NULL",
+      "+HospitalID": "int() NOT NULL",
+      "+CoordinatorID": "int() NOT NULL"
+    },
+    "Employee": {
+      "*EmployeeID": "int() NOT NULL",
+      "+PersonID": "int() NOT NULL",
+      "Role": "varchar(50) NOT NULL"
+    },
+    "Physician": {
+      "*PhysicianID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "CRM": "varchar(20) NOT NULL"
+    },
+    "Nurse": {
+      "*NurseID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "COREN": "varchar(20) NOT NULL"
+    },
+    "Resident": {
+      "*ResidentID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "+SupervisingPhysicianID": "int() NOT NULL"
+    },
+    "Researcher": {
+      "*ResearcherID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL"
+    },
+    "AdminStaff": {
+      "*AdminStaffID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL"
+    },
+    "Patient": {
+      "*PatientID": "int() NOT NULL",
+      "+PersonID": "int() NOT NULL",
+      "WristbandID": "varchar(50) NOT NULL"
+    },
+    "Visitor": {
+      "*VisitorID": "int() NOT NULL",
+      "+PersonID": "int() NOT NULL",
+      "VisitorType": "varchar(50) NOT NULL",
+      "EntryTime": "datetime() NOT NULL",
+      "ExitTime": "datetime()",
+      "AuthorizationStatus": "varchar(50)"
+    },
+    "Address": {
+      "*AddressID": "int() NOT NULL",
+      "+PersonID": "int() NOT NULL",
+      "AddressLine": "varchar(255) NOT NULL",
+      "City": "varchar(100) NOT NULL",
+      "State": "varchar(50) NOT NULL",
+      "LastUpdateTimestamp": "datetime() NOT NULL"
+    },
+    "IdentificationCard": {
+      "*CardID": "int() NOT NULL",
+      "IssueDate": "date() NOT NULL",
+      "ExpiryDate": "date() NOT NULL",
+      "Type": "varchar(50) NOT NULL",
+      "Active": "boolean NOT NULL",
+      "+PersonID": "int()",
+      "+TempPersonID": "int()"
+    },
+    "Schedule": {
+      "*ScheduleID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "ShiftDetails": "text()"
+    },
+    "TimeClock": {
+      "*ClockID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "ClockInTime": "datetime() NOT NULL",
+      "ClockOutTime": "datetime()"
+    },
+    "AvailabilityException": {
+      "*ExceptionID": "int() NOT NULL",
+      "+EmployeeID": "int() NOT NULL",
+      "StartDate": "date() NOT NULL",
+      "EndDate": "date() NOT NULL",
+      "Type": "varchar(50) NOT NULL",
+      "Note": "text()"
+    },
+    "PatientMovement": {
+      "*MovementID": "int() NOT NULL",
+      "+PatientID": "int() NOT NULL",
+      "+DepartmentID": "int() NOT NULL",
+      "Timestamp": "datetime() NOT NULL",
+      "Status": "varchar(50) NOT NULL"
+    }
+  },
+  "relations": [
+    "Hospital:HospitalID 1--* Department:HospitalID",
+    "Department:DepartmentID 1--* PatientMovement:DepartmentID",
+    "Department:CoordinatorID 1--* Person:PersonID",
+    "Person:PersonID 1--* Employee:PersonID",
+    "Employee:EmployeeID 1--* Physician:EmployeeID",
+    "Employee:EmployeeID 1--* Nurse:EmployeeID",
+    "Employee:EmployeeID 1--* Resident:EmployeeID",
+    "Employee:EmployeeID 1--* Researcher:EmployeeID",
+    "Employee:EmployeeID 1--* AdminStaff:EmployeeID",
+    "Person:PersonID 1--* Patient:PersonID",
+    "Person:PersonID 1--* Visitor:PersonID",
+    "Person:PersonID 1--* Address:PersonID",
+    "Employee:EmployeeID 1--* IdentificationCard:PersonID",
+    "IdentificationCard:CardID 1--* PatientMovement:CardID",
+    "Employee:EmployeeID 1--* Schedule:EmployeeID",
+    "Employee:EmployeeID 1--* TimeClock:EmployeeID",
+    "Employee:EmployeeID 1--* AvailabilityException:EmployeeID",
+    "Patient:PatientID 1--* PatientMovement:PatientID"
+  ],
+  "rankAdjustments": "",
+  "label": "Integrated Hospital Management System"
+}
