@@ -46,7 +46,7 @@
 #### Entity
 - Missing entity to register identification card loss.
 - The model only includes an entity for card failure, but the specification also requires handling lost identification cards.
-- Because there is no specific structure for card loss, the model does not fully support the history of lost, replaced or invalidated cards.
+
 
 #### Attributes
 - Required attributes are not marked as `NOT NULL`.
