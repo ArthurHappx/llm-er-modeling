@@ -27,12 +27,12 @@
 - [x] Absence of entities with too many attributes (e.g., > 12).
 - [ ] Absence of unnecessary complex relationships.
 - [x] Decomposition of large models into logical submodels.
-- [x] Limited depth of generalization/specialization hierarchies (e.g., > 3).
+- [x] Minimization of very deep generalization/specialization hierarchies (e.g., > 3).
 - [ ] Absence of n-ary relationships where two binary ones would suffice.
 
 ### 1.5. Flexibility
 - [x] Anticipated domain changes can be implemented with minimal impact.
-- [x] Highly specific entities were avoided.
+- [x] Highly specific entities were avoided (preference for general concepts).
 - [x] Subtypes were used only when necessary.
 
 ### 1.6. Implementability
