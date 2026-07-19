@@ -11,9 +11,9 @@
 ### 1.2. Correctness
 - [ ] Attributes are associated with the correct entities.
 - [ ] Relationship types (1:1, 1:N, N:N) are correct.
-- [x] There are no relationships not required by the domain (“spurious relationships”).
+- [ ] There are no relationships not required by the domain (“spurious relationships”).
 - [x] There are no duplicated or inconsistent attributes.
-- [x] There are no unnecessary entities.
+- [ ] There are no unnecessary entities.
 - [x] Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.
 
 ### 1.3. Clarity
