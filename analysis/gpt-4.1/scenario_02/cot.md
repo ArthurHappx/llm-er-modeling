@@ -19,7 +19,7 @@
 ### 1.3. Clarity
 - [x] Entity names are clear, descriptive, and unambiguous.
 - [x] Attribute names accurately reflect their content.
-- [x] The layout supports readability (subareas separated by context).
+- [ ] The layout supports readability (subareas separated by context).
 - [x] Primary and foreign keys follow a consistent pattern.
 - [ ] There are no multiple names for the same concept.
 
