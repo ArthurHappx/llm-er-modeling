@@ -1,0 +1,19 @@
+File,Expected Model,Metadata Model,Expected Prompt,Metadata Prompt,Expected Scenario,Metadata Scenario,Issues
+gpt-5.1\scenario_01\cot-verifier.md,GPT-5.1,GPT-5.1,CoT + Verifier,CoT + Verifier,01,01,none
+gpt-5.1\scenario_01\cot.md,GPT-5.1,GPT-5.1,CoT,CoT,01,01,none
+gpt-5.1\scenario_01\one-shot.md,GPT-5.1,GPT-5.1,One-shot,One-shot,01,01,none
+gpt-5.1\scenario_02\cot-verifier.md,GPT-5.1,GPT-5.1,CoT + Verifier,<missing>,02,02,prompt
+gpt-5.1\scenario_02\cot.md,GPT-5.1,GPT-5.1,CoT,CoT,02,02,none
+gpt-5.1\scenario_02\one-shot.md,GPT-5.1,GPT-5.1,One-shot,One-shot,02,01,scenario
+gpt-5.1\scenario_03\cot-verifier.md,GPT-5.1,GPT-5.1,CoT + Verifier,CoT + Verifier,03,03,none
+gpt-5.1\scenario_03\cot.md,GPT-5.1,GPT-5.1,CoT,CoT,03,03,none
+gpt-5.1\scenario_03\one-shot.md,GPT-5.1,GPT-5.1,One-shot,One-shot,03,03,none
+qwen\scenario_01\cot-verifier.md,Qwen-3,Qwen-3,CoT + Verifier,CoT + Verifier,01,01,none
+qwen\scenario_01\cot.md,Qwen-3,Qwen-3,CoT,CoT,01,01,none
+qwen\scenario_01\one-shot.md,Qwen-3,Qwen-3,One-shot,One-shot,01,01,none
+qwen\scenario_02\cot-verifier.md,Qwen-3,GPT-5.1,CoT + Verifier,CoT + Verifier,02,02,model
+qwen\scenario_02\cot.md,Qwen-3,GPT-5.1,CoT,CoT,02,02,model
+qwen\scenario_02\one-shot.md,Qwen-3,GPT-5.1,One-shot,CoT,02,02,"model, prompt"
+qwen\scenario_03\cot-verifier.md,Qwen-3,Qwen-3,CoT + Verifier,CoT + Verifier,03,03,none
+qwen\scenario_03\cot.md,Qwen-3,Qwen-3,CoT,CoT,03,03,none
+qwen\scenario_03\one-shot.md,Qwen-3,Qwen-3,One-shot,One-shot,03,03,none

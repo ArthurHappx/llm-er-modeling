@@ -1,0 +1,20 @@
+{
+  "models": [
+    "GPT-5.1",
+    "Qwen-3"
+  ],
+  "prompts": [
+    "One-shot",
+    "CoT",
+    "CoT + Verifier"
+  ],
+  "scenarios": [
+    "01",
+    "02",
+    "03"
+  ],
+  "outputs": 18,
+  "checklist_items_per_output": 26,
+  "permutations": 20000,
+  "model_label_note": "GPT outputs are labeled GPT-5.1. The analysis checklist directory was renamed from gpt-4.1 to gpt-5.1 after confirming the model version."
+}

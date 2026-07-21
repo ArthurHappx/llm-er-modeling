@@ -1,0 +1,4 @@
+Contrast,Mean difference,SD difference,Standardized paired effect (dz)
+GPT-5.1 - Qwen-3,7.264957,14.447984,0.502835
+CoT - One-shot,7.051282,17.778497,0.396619
+CoT + Verifier - CoT,4.487179,7.464578,0.60113

@@ -1,0 +1,469 @@
+Model,Prompt,Scenario,Dimension,Criterion,Satisfied
+GPT-5.1,CoT + Verifier,01,Completeness,Have all domain entities been identified?,1
+GPT-5.1,CoT + Verifier,01,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT + Verifier,01,Completeness,Are there sufficient attributes to characterize each entity?,1
+GPT-5.1,CoT + Verifier,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+GPT-5.1,CoT + Verifier,01,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT + Verifier,01,Correctness,Attributes are associated with the correct entities.,0
+GPT-5.1,CoT + Verifier,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+GPT-5.1,CoT + Verifier,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+GPT-5.1,CoT + Verifier,01,Correctness,There are no duplicated or inconsistent attributes.,0
+GPT-5.1,CoT + Verifier,01,Correctness,There are no unnecessary entities.,0
+GPT-5.1,CoT + Verifier,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT + Verifier,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT + Verifier,01,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT + Verifier,01,Clarity,The layout supports readability (subareas separated by context).,1
+GPT-5.1,CoT + Verifier,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT + Verifier,01,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,CoT + Verifier,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT + Verifier,01,Simplicity,Absence of unnecessary complex relationships.,0
+GPT-5.1,CoT + Verifier,01,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT + Verifier,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT + Verifier,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,0
+GPT-5.1,CoT + Verifier,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,1
+GPT-5.1,CoT + Verifier,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,CoT + Verifier,01,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT + Verifier,01,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT + Verifier,01,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,CoT,01,Completeness,Have all domain entities been identified?,1
+GPT-5.1,CoT,01,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT,01,Completeness,Are there sufficient attributes to characterize each entity?,1
+GPT-5.1,CoT,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+GPT-5.1,CoT,01,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT,01,Correctness,Attributes are associated with the correct entities.,0
+GPT-5.1,CoT,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+GPT-5.1,CoT,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+GPT-5.1,CoT,01,Correctness,There are no duplicated or inconsistent attributes.,0
+GPT-5.1,CoT,01,Correctness,There are no unnecessary entities.,0
+GPT-5.1,CoT,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT,01,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT,01,Clarity,The layout supports readability (subareas separated by context).,1
+GPT-5.1,CoT,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT,01,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,CoT,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT,01,Simplicity,Absence of unnecessary complex relationships.,0
+GPT-5.1,CoT,01,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,0
+GPT-5.1,CoT,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,1
+GPT-5.1,CoT,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,CoT,01,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT,01,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT,01,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,One-shot,01,Completeness,Have all domain entities been identified?,1
+GPT-5.1,One-shot,01,Completeness,Are all required relationships represented in the diagram?,1
+GPT-5.1,One-shot,01,Completeness,Are there sufficient attributes to characterize each entity?,1
+GPT-5.1,One-shot,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+GPT-5.1,One-shot,01,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,One-shot,01,Correctness,Attributes are associated with the correct entities.,0
+GPT-5.1,One-shot,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+GPT-5.1,One-shot,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+GPT-5.1,One-shot,01,Correctness,There are no duplicated or inconsistent attributes.,0
+GPT-5.1,One-shot,01,Correctness,There are no unnecessary entities.,0
+GPT-5.1,One-shot,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,One-shot,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,One-shot,01,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,One-shot,01,Clarity,The layout supports readability (subareas separated by context).,0
+GPT-5.1,One-shot,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,One-shot,01,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,One-shot,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",0
+GPT-5.1,One-shot,01,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,One-shot,01,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,One-shot,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,One-shot,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,0
+GPT-5.1,One-shot,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,One-shot,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+GPT-5.1,One-shot,01,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,One-shot,01,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,One-shot,01,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,CoT + Verifier,02,Completeness,Have all domain entities been identified?,0
+GPT-5.1,CoT + Verifier,02,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT + Verifier,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+GPT-5.1,CoT + Verifier,02,Completeness,Do the cardinalities correctly represent the business rules?,1
+GPT-5.1,CoT + Verifier,02,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT + Verifier,02,Correctness,Attributes are associated with the correct entities.,1
+GPT-5.1,CoT + Verifier,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+GPT-5.1,CoT + Verifier,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+GPT-5.1,CoT + Verifier,02,Correctness,There are no duplicated or inconsistent attributes.,1
+GPT-5.1,CoT + Verifier,02,Correctness,There are no unnecessary entities.,1
+GPT-5.1,CoT + Verifier,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT + Verifier,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT + Verifier,02,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT + Verifier,02,Clarity,The layout supports readability (subareas separated by context).,0
+GPT-5.1,CoT + Verifier,02,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT + Verifier,02,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,CoT + Verifier,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT + Verifier,02,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,CoT + Verifier,02,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT + Verifier,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT + Verifier,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,CoT + Verifier,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,CoT + Verifier,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,CoT + Verifier,02,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT + Verifier,02,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT + Verifier,02,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,CoT,02,Completeness,Have all domain entities been identified?,0
+GPT-5.1,CoT,02,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+GPT-5.1,CoT,02,Completeness,Do the cardinalities correctly represent the business rules?,0
+GPT-5.1,CoT,02,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT,02,Correctness,Attributes are associated with the correct entities.,1
+GPT-5.1,CoT,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+GPT-5.1,CoT,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+GPT-5.1,CoT,02,Correctness,There are no duplicated or inconsistent attributes.,0
+GPT-5.1,CoT,02,Correctness,There are no unnecessary entities.,0
+GPT-5.1,CoT,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT,02,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT,02,Clarity,The layout supports readability (subareas separated by context).,0
+GPT-5.1,CoT,02,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT,02,Clarity,There are no multiple names for the same concept.,0
+GPT-5.1,CoT,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT,02,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,CoT,02,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,CoT,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,CoT,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+GPT-5.1,CoT,02,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT,02,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT,02,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,One-shot,02,Completeness,Have all domain entities been identified?,0
+GPT-5.1,One-shot,02,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,One-shot,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+GPT-5.1,One-shot,02,Completeness,Do the cardinalities correctly represent the business rules?,1
+GPT-5.1,One-shot,02,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,One-shot,02,Correctness,Attributes are associated with the correct entities.,1
+GPT-5.1,One-shot,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",1
+GPT-5.1,One-shot,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+GPT-5.1,One-shot,02,Correctness,There are no duplicated or inconsistent attributes.,1
+GPT-5.1,One-shot,02,Correctness,There are no unnecessary entities.,0
+GPT-5.1,One-shot,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,One-shot,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,One-shot,02,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,One-shot,02,Clarity,The layout supports readability (subareas separated by context).,1
+GPT-5.1,One-shot,02,Clarity,Primary and foreign keys follow a consistent pattern.,0
+GPT-5.1,One-shot,02,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,One-shot,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,One-shot,02,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,One-shot,02,Simplicity,Decomposition of large models into logical submodels.,0
+GPT-5.1,One-shot,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,One-shot,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,One-shot,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,One-shot,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,One-shot,02,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,One-shot,02,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,One-shot,02,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,CoT + Verifier,03,Completeness,Have all domain entities been identified?,0
+GPT-5.1,CoT + Verifier,03,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT + Verifier,03,Completeness,Are there sufficient attributes to characterize each entity?,1
+GPT-5.1,CoT + Verifier,03,Completeness,Do the cardinalities correctly represent the business rules?,1
+GPT-5.1,CoT + Verifier,03,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT + Verifier,03,Correctness,Attributes are associated with the correct entities.,1
+GPT-5.1,CoT + Verifier,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",1
+GPT-5.1,CoT + Verifier,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+GPT-5.1,CoT + Verifier,03,Correctness,There are no duplicated or inconsistent attributes.,1
+GPT-5.1,CoT + Verifier,03,Correctness,There are no unnecessary entities.,1
+GPT-5.1,CoT + Verifier,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT + Verifier,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT + Verifier,03,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT + Verifier,03,Clarity,The layout supports readability (subareas separated by context).,1
+GPT-5.1,CoT + Verifier,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT + Verifier,03,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,CoT + Verifier,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT + Verifier,03,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,CoT + Verifier,03,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT + Verifier,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT + Verifier,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,CoT + Verifier,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,CoT + Verifier,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,CoT + Verifier,03,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT + Verifier,03,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT + Verifier,03,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,CoT,03,Completeness,Have all domain entities been identified?,0
+GPT-5.1,CoT,03,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,CoT,03,Completeness,Are there sufficient attributes to characterize each entity?,1
+GPT-5.1,CoT,03,Completeness,Do the cardinalities correctly represent the business rules?,1
+GPT-5.1,CoT,03,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,CoT,03,Correctness,Attributes are associated with the correct entities.,1
+GPT-5.1,CoT,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",1
+GPT-5.1,CoT,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+GPT-5.1,CoT,03,Correctness,There are no duplicated or inconsistent attributes.,1
+GPT-5.1,CoT,03,Correctness,There are no unnecessary entities.,1
+GPT-5.1,CoT,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,CoT,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,CoT,03,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,CoT,03,Clarity,The layout supports readability (subareas separated by context).,1
+GPT-5.1,CoT,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,CoT,03,Clarity,There are no multiple names for the same concept.,1
+GPT-5.1,CoT,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,CoT,03,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,CoT,03,Simplicity,Decomposition of large models into logical submodels.,1
+GPT-5.1,CoT,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,CoT,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,CoT,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,CoT,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+GPT-5.1,CoT,03,Flexibility,Subtypes were used only when necessary.,1
+GPT-5.1,CoT,03,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,CoT,03,Implementability,Attribute types are compatible with the target DBMS.,1
+GPT-5.1,One-shot,03,Completeness,Have all domain entities been identified?,0
+GPT-5.1,One-shot,03,Completeness,Are all required relationships represented in the diagram?,0
+GPT-5.1,One-shot,03,Completeness,Are there sufficient attributes to characterize each entity?,0
+GPT-5.1,One-shot,03,Completeness,Do the cardinalities correctly represent the business rules?,1
+GPT-5.1,One-shot,03,Completeness,Does the model cover all requirements identified in the scope?,0
+GPT-5.1,One-shot,03,Correctness,Attributes are associated with the correct entities.,0
+GPT-5.1,One-shot,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",1
+GPT-5.1,One-shot,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+GPT-5.1,One-shot,03,Correctness,There are no duplicated or inconsistent attributes.,0
+GPT-5.1,One-shot,03,Correctness,There are no unnecessary entities.,0
+GPT-5.1,One-shot,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+GPT-5.1,One-shot,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+GPT-5.1,One-shot,03,Clarity,Attribute names accurately reflect their content.,1
+GPT-5.1,One-shot,03,Clarity,The layout supports readability (subareas separated by context).,0
+GPT-5.1,One-shot,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+GPT-5.1,One-shot,03,Clarity,There are no multiple names for the same concept.,0
+GPT-5.1,One-shot,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+GPT-5.1,One-shot,03,Simplicity,Absence of unnecessary complex relationships.,1
+GPT-5.1,One-shot,03,Simplicity,Decomposition of large models into logical submodels.,0
+GPT-5.1,One-shot,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+GPT-5.1,One-shot,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+GPT-5.1,One-shot,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+GPT-5.1,One-shot,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+GPT-5.1,One-shot,03,Flexibility,Subtypes were used only when necessary.,0
+GPT-5.1,One-shot,03,Implementability,No requirements demand complex triggers or external logic.,0
+GPT-5.1,One-shot,03,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,CoT + Verifier,01,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT + Verifier,01,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT + Verifier,01,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT + Verifier,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT + Verifier,01,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT + Verifier,01,Correctness,Attributes are associated with the correct entities.,1
+Qwen-3,CoT + Verifier,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT + Verifier,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+Qwen-3,CoT + Verifier,01,Correctness,There are no duplicated or inconsistent attributes.,0
+Qwen-3,CoT + Verifier,01,Correctness,There are no unnecessary entities.,1
+Qwen-3,CoT + Verifier,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT + Verifier,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,CoT + Verifier,01,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,CoT + Verifier,01,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT + Verifier,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT + Verifier,01,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT + Verifier,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT + Verifier,01,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT + Verifier,01,Simplicity,Decomposition of large models into logical submodels.,0
+Qwen-3,CoT + Verifier,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,CoT + Verifier,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,CoT + Verifier,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,CoT + Verifier,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,CoT + Verifier,01,Flexibility,Subtypes were used only when necessary.,0
+Qwen-3,CoT + Verifier,01,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT + Verifier,01,Implementability,Attribute types are compatible with the target DBMS.,0
+Qwen-3,CoT,01,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT,01,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT,01,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT,01,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT,01,Correctness,Attributes are associated with the correct entities.,0
+Qwen-3,CoT,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+Qwen-3,CoT,01,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,CoT,01,Correctness,There are no unnecessary entities.,1
+Qwen-3,CoT,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",0
+Qwen-3,CoT,01,Clarity,Attribute names accurately reflect their content.,0
+Qwen-3,CoT,01,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT,01,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT,01,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT,01,Simplicity,Decomposition of large models into logical submodels.,1
+Qwen-3,CoT,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,CoT,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,CoT,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,CoT,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,CoT,01,Flexibility,Subtypes were used only when necessary.,0
+Qwen-3,CoT,01,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT,01,Implementability,Attribute types are compatible with the target DBMS.,0
+Qwen-3,One-shot,01,Completeness,Have all domain entities been identified?,0
+Qwen-3,One-shot,01,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,One-shot,01,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,One-shot,01,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,One-shot,01,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,One-shot,01,Correctness,Attributes are associated with the correct entities.,1
+Qwen-3,One-shot,01,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,One-shot,01,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+Qwen-3,One-shot,01,Correctness,There are no duplicated or inconsistent attributes.,0
+Qwen-3,One-shot,01,Correctness,There are no unnecessary entities.,1
+Qwen-3,One-shot,01,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",1
+Qwen-3,One-shot,01,Clarity,"Entity names are clear, descriptive, and unambiguous.",0
+Qwen-3,One-shot,01,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,One-shot,01,Clarity,The layout supports readability (subareas separated by context).,0
+Qwen-3,One-shot,01,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,One-shot,01,Clarity,There are no multiple names for the same concept.,0
+Qwen-3,One-shot,01,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,One-shot,01,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,One-shot,01,Simplicity,Decomposition of large models into logical submodels.,1
+Qwen-3,One-shot,01,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,One-shot,01,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,0
+Qwen-3,One-shot,01,Flexibility,Anticipated domain changes can be implemented with minimal impact.,1
+Qwen-3,One-shot,01,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,One-shot,01,Flexibility,Subtypes were used only when necessary.,1
+Qwen-3,One-shot,01,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,One-shot,01,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,CoT + Verifier,02,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT + Verifier,02,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT + Verifier,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT + Verifier,02,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT + Verifier,02,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT + Verifier,02,Correctness,Attributes are associated with the correct entities.,0
+Qwen-3,CoT + Verifier,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT + Verifier,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+Qwen-3,CoT + Verifier,02,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,CoT + Verifier,02,Correctness,There are no unnecessary entities.,1
+Qwen-3,CoT + Verifier,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT + Verifier,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,CoT + Verifier,02,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,CoT + Verifier,02,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT + Verifier,02,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT + Verifier,02,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT + Verifier,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT + Verifier,02,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT + Verifier,02,Simplicity,Decomposition of large models into logical submodels.,1
+Qwen-3,CoT + Verifier,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,CoT + Verifier,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,CoT + Verifier,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,CoT + Verifier,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,CoT + Verifier,02,Flexibility,Subtypes were used only when necessary.,0
+Qwen-3,CoT + Verifier,02,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT + Verifier,02,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,CoT,02,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT,02,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT,02,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT,02,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT,02,Correctness,Attributes are associated with the correct entities.,0
+Qwen-3,CoT,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,1
+Qwen-3,CoT,02,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,CoT,02,Correctness,There are no unnecessary entities.,1
+Qwen-3,CoT,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,CoT,02,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,CoT,02,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT,02,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT,02,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT,02,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT,02,Simplicity,Decomposition of large models into logical submodels.,1
+Qwen-3,CoT,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,CoT,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,CoT,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,CoT,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,CoT,02,Flexibility,Subtypes were used only when necessary.,0
+Qwen-3,CoT,02,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT,02,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,One-shot,02,Completeness,Have all domain entities been identified?,0
+Qwen-3,One-shot,02,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,One-shot,02,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,One-shot,02,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,One-shot,02,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,One-shot,02,Correctness,Attributes are associated with the correct entities.,0
+Qwen-3,One-shot,02,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,One-shot,02,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+Qwen-3,One-shot,02,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,One-shot,02,Correctness,There are no unnecessary entities.,0
+Qwen-3,One-shot,02,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",1
+Qwen-3,One-shot,02,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,One-shot,02,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,One-shot,02,Clarity,The layout supports readability (subareas separated by context).,0
+Qwen-3,One-shot,02,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,One-shot,02,Clarity,There are no multiple names for the same concept.,0
+Qwen-3,One-shot,02,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,One-shot,02,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,One-shot,02,Simplicity,Decomposition of large models into logical submodels.,1
+Qwen-3,One-shot,02,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,One-shot,02,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,One-shot,02,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,One-shot,02,Flexibility,Highly specific entities were avoided (preference for general concepts).,1
+Qwen-3,One-shot,02,Flexibility,Subtypes were used only when necessary.,0
+Qwen-3,One-shot,02,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,One-shot,02,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,CoT + Verifier,03,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT + Verifier,03,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT + Verifier,03,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT + Verifier,03,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT + Verifier,03,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT + Verifier,03,Correctness,Attributes are associated with the correct entities.,1
+Qwen-3,CoT + Verifier,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT + Verifier,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+Qwen-3,CoT + Verifier,03,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,CoT + Verifier,03,Correctness,There are no unnecessary entities.,0
+Qwen-3,CoT + Verifier,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT + Verifier,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,CoT + Verifier,03,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,CoT + Verifier,03,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT + Verifier,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT + Verifier,03,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT + Verifier,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT + Verifier,03,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT + Verifier,03,Simplicity,Decomposition of large models into logical submodels.,0
+Qwen-3,CoT + Verifier,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,CoT + Verifier,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,CoT + Verifier,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,CoT + Verifier,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+Qwen-3,CoT + Verifier,03,Flexibility,Subtypes were used only when necessary.,1
+Qwen-3,CoT + Verifier,03,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT + Verifier,03,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,CoT,03,Completeness,Have all domain entities been identified?,0
+Qwen-3,CoT,03,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,CoT,03,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,CoT,03,Completeness,Do the cardinalities correctly represent the business rules?,0
+Qwen-3,CoT,03,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,CoT,03,Correctness,Attributes are associated with the correct entities.,1
+Qwen-3,CoT,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,CoT,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+Qwen-3,CoT,03,Correctness,There are no duplicated or inconsistent attributes.,1
+Qwen-3,CoT,03,Correctness,There are no unnecessary entities.,0
+Qwen-3,CoT,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,CoT,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,CoT,03,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,CoT,03,Clarity,The layout supports readability (subareas separated by context).,1
+Qwen-3,CoT,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,CoT,03,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,CoT,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,CoT,03,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,CoT,03,Simplicity,Decomposition of large models into logical submodels.,0
+Qwen-3,CoT,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",0
+Qwen-3,CoT,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,0
+Qwen-3,CoT,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,1
+Qwen-3,CoT,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+Qwen-3,CoT,03,Flexibility,Subtypes were used only when necessary.,1
+Qwen-3,CoT,03,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,CoT,03,Implementability,Attribute types are compatible with the target DBMS.,1
+Qwen-3,One-shot,03,Completeness,Have all domain entities been identified?,0
+Qwen-3,One-shot,03,Completeness,Are all required relationships represented in the diagram?,0
+Qwen-3,One-shot,03,Completeness,Are there sufficient attributes to characterize each entity?,0
+Qwen-3,One-shot,03,Completeness,Do the cardinalities correctly represent the business rules?,1
+Qwen-3,One-shot,03,Completeness,Does the model cover all requirements identified in the scope?,0
+Qwen-3,One-shot,03,Correctness,Attributes are associated with the correct entities.,0
+Qwen-3,One-shot,03,Correctness,"Relationship types (1:1, 1:N, N:N) are correct.",0
+Qwen-3,One-shot,03,Correctness,There are no relationships not required by the domain (“spurious relationships”).,0
+Qwen-3,One-shot,03,Correctness,There are no duplicated or inconsistent attributes.,0
+Qwen-3,One-shot,03,Correctness,There are no unnecessary entities.,0
+Qwen-3,One-shot,03,Correctness,"Minimum constraints (UNIQUE, NOT NULL) have been correctly mapped.",0
+Qwen-3,One-shot,03,Clarity,"Entity names are clear, descriptive, and unambiguous.",1
+Qwen-3,One-shot,03,Clarity,Attribute names accurately reflect their content.,1
+Qwen-3,One-shot,03,Clarity,The layout supports readability (subareas separated by context).,0
+Qwen-3,One-shot,03,Clarity,Primary and foreign keys follow a consistent pattern.,1
+Qwen-3,One-shot,03,Clarity,There are no multiple names for the same concept.,1
+Qwen-3,One-shot,03,Simplicity,"Absence of entities with too many attributes (e.g., > 12).",1
+Qwen-3,One-shot,03,Simplicity,Absence of unnecessary complex relationships.,1
+Qwen-3,One-shot,03,Simplicity,Decomposition of large models into logical submodels.,0
+Qwen-3,One-shot,03,Simplicity,"Minimization of very deep generalization/specialization hierarchies (e.g., > 3).",1
+Qwen-3,One-shot,03,Simplicity,Absence of n-ary relationships where two binary ones would suffice.,1
+Qwen-3,One-shot,03,Flexibility,Anticipated domain changes can be implemented with minimal impact.,0
+Qwen-3,One-shot,03,Flexibility,Highly specific entities were avoided (preference for general concepts).,0
+Qwen-3,One-shot,03,Flexibility,Subtypes were used only when necessary.,1
+Qwen-3,One-shot,03,Implementability,No requirements demand complex triggers or external logic.,0
+Qwen-3,One-shot,03,Implementability,Attribute types are compatible with the target DBMS.,1

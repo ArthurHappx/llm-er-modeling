@@ -1,0 +1,4 @@
+Effect,df,F,Permutation p,Partial eta squared
+Model,1,2.192716,0.160442,0.179838
+Prompt,2,1.874052,0.19259,0.272627
+Model x Prompt,2,0.599393,0.568072,0.107046
